@@ -33,8 +33,8 @@ class MicrophoneRecorder {
       const rms = Math.sqrt(sumOfSquares / channelData.length);
       const volume = Math.min(Math.round(rms * 200), 100);
 
-      onprocess(volume)
-    };  
+      onprocess(volume);
+    };
   }
 
   stop() {

@@ -1,14 +1,15 @@
 const path = require('path');
+
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   devtool: isDevelopment ? 'eval-source-map' : 'source-map',
-  entry: ['babel-polyfill', './src/index.jsx'],
+  entry: [ 'babel-polyfill', './src/index.jsx' ],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -26,7 +27,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            plugins: [isDevelopment && 'react-refresh/babel'].filter(Boolean),
+            plugins: [ isDevelopment && 'react-refresh/babel' ].filter(Boolean),
           },
         },
       },
@@ -37,7 +38,7 @@ module.exports = {
           'css-loader',
           'sass-loader',
         ],
-      }
+      },
     ],
   },
   plugins: [
