@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+html {
+  background: #353535;
+}
+
+body {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+}
